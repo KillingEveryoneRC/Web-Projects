@@ -9,7 +9,6 @@
 <body>
 <div class="navbar">
     <div><a href="main.html" class="logo">JobFinder</a></div>
-    <button id="toggle-nav" class="nav-toggle-button">></button>
     <div class="menu">
         <a href="main.html">Main</a>
         <a href="main.html">Vacancies</a>
@@ -25,47 +24,36 @@
 
 <div class="vacancies-section">
     <h2>Вакансії</h2>
-    <div class="sort-options">
-        <label for="sort">Sort by:</label>
-        <select class="sort" id="sort">
-            <option class="sort" value="date">Newest</option>
-            <option class="sort" value="salary">Salary</option>
-            <option class="sort" value="experience">Experience</option>
-        </select>
+    <div class="vacancy-card">
+        <div class="company-name">Microsoft</div>
+        <div class="position">UI/UX Designer</div>
+        <div class="details">
+            <div>💰 $3500</div>
+            <div>📍 USA</div>
+            <div>📝 Online</div>
+            <div>💼 Experience: 2 years</div>
+        </div>
     </div>
-    <div class="filters">
-        <label for="type">Type:</label>
-        <select id="type">
-            <option value="all">All</option>
-            <option value="Online">Online</option>
-            <option value="Offline">Offline</option>
-        </select>
-
-        <label for="country">Country:</label>
-        <select id="country">
-            <option value="all">All</option>
-            <option value="USA">USA</option>
-            <option value="UK">UK</option>
-            <option value="UA">Ukraine</option>
-        </select>
-
-        <label for="salary">Salary:</label>
-        <select id="salary">
-            <option value="all">All</option>
-            <option value="2000">$2000+</option>
-            <option value="2500">$2500+</option>
-            <option value="3000">$3000+</option>
-        </select>
-
-        <label for="experience">Experience:</label>
-        <select id="experience">
-            <option value="all">All</option>
-            <option value="None">None</option>
-            <option value="1">1 year</option>
-            <option value="2">2 years</option>
-        </select>
+    <div class="vacancy-card">
+        <div class="company-name">Google</div>
+        <div class="position">Front-End Developer</div>
+        <div class="details">
+            <div>💰 $2500</div>
+            <div>📍 UK</div>
+            <div>📝 Offline</div>
+            <div>💼 Experience: 3 years</div>
+        </div>
     </div>
-    <div class="vacancies-list"></div>
+    <div class="vacancy-card">
+        <div class="company-name">GSC Game World</div>
+        <div class="position">3D Modeler/Graphic Designer</div>
+        <div class="details">
+            <div>💰 $1500</div>
+            <div>📍 Ukraine</div>
+            <div>📝 Offline</div>
+            <div>💼 Experience: None</div>
+        </div>
+    </div>
 </div>
 
 <footer>
@@ -81,16 +69,9 @@
             <a href="https://web.telegram.org" target="_blank">Telegram</a>
             <a href="https://www.youtube.com" target="_blank">YouTube</a>
         </div>
-        <div class="feedback">
-            <h3>Write a feedback here!</h3>
-            <input type="text" id="feedback-input" placeholder="Please, enter your feedback" maxlength="50">
-            <button id="submit-feedback">Send</button>
-            <p id="feedback-message"></p>
-        </div>
     </div>
     <p class="footer-copyright">&copy; 2025 JobFinder. All rights reserved.</p>
 </footer>
 
-<script src="scripts.js"></script>
 </body>
 </html>
