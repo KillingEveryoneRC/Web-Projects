@@ -10,10 +10,35 @@ const Vacancies = () => {
         setVacancies(sorted);
     };
 
+    const sortBySalary = () => {
+        const sorted = [...vacancies].sort((a, b) => {
+            const salaryA = parseInt(a.salary.replace(/\$/g, ""));
+            const salaryB = parseInt(b.salary.replace(/\$/g, ""));
+            return salaryB - salaryA; // Більша зарплата перша
+        });
+        setVacancies(sorted);
+    };
+
+    const sortByExperience = () => {
+        const getYears = (experience) => {
+            if (experience.toLowerCase() === "none") return 0;
+            return parseInt(experience);
+        };
+
+        const sorted = [...vacancies].sort((a, b) => getYears(b.experience) - getYears(a.experience));
+        setVacancies(sorted);
+    };
+
     return (
         <div className="vacancies-section">
             <h2>Вакансії</h2>
-            <button className="button" onClick={sortByDate}>Сортувати за датою</button>
+
+            <div className="sort-buttons">
+                <button className="button" onClick={sortByDate}>Сортувати за датою</button>
+                <button className="button" onClick={sortBySalary}>Сортувати за зарплатою</button>
+                <button className="button" onClick={sortByExperience}>Сортувати за досвідом</button>
+            </div>
+
             <div className="vacancies-list">
                 {vacancies.map((vacancy) => (
                     <JobCard key={vacancy.id} vacancy={vacancy} />
