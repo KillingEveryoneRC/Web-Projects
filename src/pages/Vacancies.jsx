@@ -1,47 +1,37 @@
-import React, { useState } from "react";
-import vacanciesData from "../data/vacancies";
-import JobCard from "../components/JobCard";
+import React, { useEffect, useState } from "react";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { db } from "../firebase";
+import "../styles/vacancies.css";
 
 const Vacancies = () => {
-    const [vacancies, setVacancies] = useState(vacanciesData);
+    const [vacancies, setVacancies] = useState([]);
 
-    const sortByDate = () => {
-        const sorted = [...vacancies].sort((a, b) => new Date(b.date) - new Date(a.date));
-        setVacancies(sorted);
-    };
-
-    const sortBySalary = () => {
-        const sorted = [...vacancies].sort((a, b) => {
-            const salaryA = parseInt(a.salary.replace(/\$/g, ""));
-            const salaryB = parseInt(b.salary.replace(/\$/g, ""));
-            return salaryB - salaryA; // Більша зарплата перша
-        });
-        setVacancies(sorted);
-    };
-
-    const sortByExperience = () => {
-        const getYears = (experience) => {
-            if (experience.toLowerCase() === "none") return 0;
-            return parseInt(experience);
+    useEffect(() => {
+        const fetchVacancies = async () => {
+            const q = query(collection(db, "vacancies"), orderBy("createdAt", "desc"));
+            const querySnapshot = await getDocs(q);
+            const data = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+            setVacancies(data);
         };
 
-        const sorted = [...vacancies].sort((a, b) => getYears(b.experience) - getYears(a.experience));
-        setVacancies(sorted);
-    };
+        fetchVacancies();
+    }, []);
 
     return (
         <div className="vacancies-section">
-            <h2>Вакансії</h2>
-
-            <div className="sort-buttons">
-                <button className="button" onClick={sortByDate}>Сортувати за датою</button>
-                <button className="button" onClick={sortBySalary}>Сортувати за зарплатою</button>
-                <button className="button" onClick={sortByExperience}>Сортувати за досвідом</button>
-            </div>
-
+            <h2>Vacancies</h2>
             <div className="vacancies-list">
-                {vacancies.map((vacancy) => (
-                    <JobCard key={vacancy.id} vacancy={vacancy} />
+                {vacancies.map((vac) => (
+                    <div className="vacancy-card" key={vac.id}>
+                        <div className="company-name">{vac.company}</div>
+                        <div className="position">{vac.title}</div>
+                        <div className="details">
+                            <div>💰 {vac.salary}</div>
+                            <div>📍 {vac.location}</div>
+                            <div>📝 {vac.type}</div>
+                            <div>💼 Experience: {vac.experience}</div>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>
