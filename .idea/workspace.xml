@@ -5,9 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d02bac8e-81e0-449f-bad4-129ebb564a98" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/job-platform-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/job-platform-server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Vacancies.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Vacancies.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JobCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JobSearch.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserProfile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/vacancies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Register.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Vacancies.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/vacancies.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +41,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2xKWKbuEbJfg9bDUvW9MpMZSA2H" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,18 +54,26 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Lab5",
-    "last_opened_file_path": "D:/WebProjects",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/WebProjects/Lab5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\Webstorm\\WebStorm 2024.3.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebProjects\Lab5" />
+      <recent name="D:\WebProjects\Lab5\deploy-folder" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebProjects\Lab5\server" />
+      <recent name="D:\WebProjects\Lab5\client" />
       <recent name="D:\WebProjects\Lab5\job-platform-server\firebase" />
     </key>
   </component>
@@ -59,6 +93,18 @@
       <option name="presentableId" value="Default" />
       <updated>1747687183043</updated>
       <workItem from="1747687184181" duration="1975000" />
+      <workItem from="1747689274343" duration="2249000" />
+      <workItem from="1747929818359" duration="28000" />
+      <workItem from="1748867853091" duration="314000" />
+      <workItem from="1748869241525" duration="3819000" />
+      <workItem from="1748974208257" duration="34000" />
+      <workItem from="1749037647806" duration="25000" />
+      <workItem from="1749131267267" duration="20000" />
+      <workItem from="1749150484136" duration="553000" />
+      <workItem from="1749151909314" duration="1696000" />
+      <workItem from="1749154928029" duration="674000" />
+      <workItem from="1749189564207" duration="8000" />
+      <workItem from="1749208288843" duration="8958000" />
     </task>
     <servers />
   </component>
